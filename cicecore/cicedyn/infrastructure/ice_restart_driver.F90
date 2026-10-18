@@ -1291,7 +1291,7 @@
               write(nu_diag,*) subname//" direct_adjust_aice from "//trim(aice_filename)
            endif
 
-           call ice_open_nc(trim(aice_filename), fid)
+           call ice_open_nc(aice_filename, fid)
            call ice_read_nc(fid,1,trim(aice_fldname),work1,diag, &
                             field_loc=field_loc_center, &
                             field_type=field_type_scalar)
